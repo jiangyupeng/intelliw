@@ -1,0 +1,41 @@
+{
+  "name": "jiangyupeng/intelliw",
+  "description": "Intelliw Test Project",
+  "homepage": "http://www.intelliw.com",
+  "keywords": [
+    "test"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fran Jiang",
+      "email": "jiangyupeng@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "^5.3",
+    "psr/log": "^1.1"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "files": [
+      "src/Illuminate/Foundation/helpers.php",
+      "src/Illuminate/Support/helpers.php"
+    ],
+    "psr-4": {
+      "jiangyupeng\\intelliw\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "jiangyupeng\\intelliw\\": "test/"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}
